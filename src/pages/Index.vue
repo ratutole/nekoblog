@@ -2,7 +2,7 @@
   <Layout>
     <!-- Landing Section start -->
 
-    <div class="landing__content mb-16 text-xl ">
+    <div class="landing__content mb-16 text-xl">
       <div class="content mb-8">
         <div class="content__container">
           <ul class="content__container__list">
@@ -15,37 +15,28 @@
       </div>
       <div class="border-r-2 border-green-400 nk-bg-main py-2">
         <h2 class="heading heading--sub mb-1">
-          <g-image src="~/assets/freelancing.png" width="120" class="mb-2" />
+          <g-image src="~/assets/coding.svg" width="150" class="mb-2" />
           Web Developer
         </h2>
       </div>
     </div>
 
+    <section class="mb-6">
+      <h3 class="heading font-medium text-lg mb-2">A bit about me</h3>
+      <p class="font-medium text-gray-800">Hello, I am Parth. I work in making minimalistic, fast, responsive and beautiful websites. I am very passionate about making websites and working with new technologies. I will use the latest technologies to ensure your site works best on all devices</p>
+    </section>
     <!-- Landing section end -->
 
     <!-- Skills section start -->
-    <section class="skills neko-scroller" id="skills">
-      <div class="u-inner-container nk-skills-container grid grid-cols-2 gap-8">
-        <!-- <div class="nk-line"></div> -->
-        <div class="mb-6">
-          <h4 class="heading mb-2 font-normal text-lg">
-            Designer
-          </h4>
-          <p class="projects-item__text u-center">
-            I will deliver minimal, clean designs which focus on delivering
-            relevant content without distracting your viewers.
-          </p>
-        </div>
-        <g-image src="~/assets/piranha.png" width="120" class="m-auto" />
-        <g-image src="~/assets/doodle-28.png" width="120" class="m-auto" />
-        <div>
-          <h4 class="heading mb-2 text-lg font-normal">
-            Developer
-          </h4>
-          <p class="projects-item__text u-center">
-            As a developer, I will make use of all the latest technologies to
-            build you a site which will work across all devices
-          </p>
+    <section>
+      <h5 class="heading heading--mod
+       mb- text-lg font-medium mb-6">Check out the blog</h5>
+      <div class="grid grid-cols-2 gap-4">
+        <div
+          v-for="edge in $page.posts.edges"
+          :key="edge.node.id"
+        >
+          <post-teaser :post="edge.node"></post-teaser>
         </div>
       </div>
     </section>
@@ -53,18 +44,39 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  posts: allBlogPost(limit:2) {
+    edges {
+      node {
+        id
+        title
+        content
+        path  
+        tags{
+          id
+          title
+          path
+        }    
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
+import PostTeaser from "../components/PostTeaser";
 export default {
   metaInfo: {
-    title: "Hello, world!"
-  }
+    title: "Welcome to my blog",
+  },
+  components: {
+    PostTeaser,
+  },
 };
 </script>
 
 <style scoped>
-.nk-bg-main {
-  background: linear-gradient(to right, ghostwhite, white);
-}
 .content {
   bottom: 80px;
   height: 60px;
@@ -102,7 +114,17 @@ export default {
 .content__container__list__item {
   line-height: 40px;
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #382933;
+}
+
+.heading--mod::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #fe9801;
 }
 
 @keyframes change {

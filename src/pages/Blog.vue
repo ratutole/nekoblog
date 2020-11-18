@@ -16,7 +16,11 @@ query {
         title
         content
         path  
-        tags    
+        tags{
+          id
+          title
+          path
+        }    
       }
     }
   }

@@ -2,7 +2,6 @@
   <Layout>
     <!-- About Section start-->
     <section class="about neko-scroller mt-16" id="about">
-      <g-image src="~/assets/doodle-78.png" width="240" class="m-auto" />
       <div class="u-inner-container skills--mod about-flex u-center mt-16">
         <div class="mb-6">
           <div class="nk-image-container--about">
@@ -26,15 +25,15 @@
         </div>
 
         <div
-          class="tech-card-container grid grid-cols-4 gap-8 text-xs uppercase font-bold text-gray-600"
+          class="tech-card-container grid grid-cols-2 gap-8 text-xs uppercase font-bold text-gray-600"
         >
-          <div class="tech-card-content">Adobe XD</div>
-          <div class="tech-card-content">WordPress</div>
-          <div class="tech-card-content">CSS</div>
-          <div class="tech-card-content">JavaScript</div>
-          <div class="tech-card-content">HTML</div>
-          <div class="tech-card-content">Vue</div>
-          <div class="tech-card-content">WHMCS</div>
+          <div class="tech-card-content p-2">Adobe XD</div>
+          <div class="tech-card-content p-2">WordPress</div>
+          <div class="tech-card-content p-2">CSS</div>
+          <div class="tech-card-content p-2">JavaScript</div>
+          <div class="tech-card-content p-2">HTML</div>
+          <div class="tech-card-content p-2">Vue</div>
+          <div class="tech-card-content p-2">WHMCS</div>
         </div>
       </div>
     </section>
@@ -53,7 +52,6 @@ export default {
 
 <style scoped>
 .tech-card-content {
-  padding: 10px 0;
-  background: linear-gradient(to left, ghostwhite, white);
+  background: linear-gradient(to left, white, ghostwhite);
 }
 </style>

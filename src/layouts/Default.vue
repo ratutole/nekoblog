@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="layout">
       <Header />
       <transition name="fade" appear>
@@ -29,7 +29,7 @@ body {
   padding: 0;
   line-height: 1.5;
   font-weight: 300;
-  background: ghostwhite;
+  background: #f5f5f5;
 }
 
 h1 {
@@ -45,7 +45,6 @@ h2 {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  /* background: antiquewhite; */
 }
 
 .fade-enter-active {

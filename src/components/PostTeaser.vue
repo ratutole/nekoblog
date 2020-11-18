@@ -1,8 +1,13 @@
 <template>
-  <div class="card">
-    <h2>{{ post.title }}</h2>
+  <div class="card p-3 h-full flex flex-col justify-between shadow">
+    <div>
+    <h2 class="mb-2">{{ post.title }}</h2>
     <p v-html="post.content"></p>
-    <g-link :to="post.path">Read Full Post</g-link>
+    </div>
+    <div>
+    <PostTags :post="post"></PostTags>
+    <g-link :to="post.path" class="text-blue-700 block text-right font-medium">read the full post</g-link>
+    </div>
   </div>
 </template>
 
@@ -15,18 +20,18 @@ query {
 </static-query>
 
 <script>
+import PostTags from "./PostTags";
 export default {
   name: "PostTeaser",
-  props: ["post"]
+  props: ["post"],
+  components: {
+    PostTags
+  }
 };
 </script>
 
-<style>
-.card {
-  padding: 10px 20px;
-  border: 1px solid #dfdede;
-  margin: 15px 0;
-  border-radius: 6px;
-  box-shadow: inset 0 3px 6px rgba(2, 2, 2, 0.03);
-}
+<style scoped>
+  .card{
+    background: #fff;
+  }
 </style>
