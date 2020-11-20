@@ -8,7 +8,7 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href:
-      "https://fonts.googleapis.com/css?family=Quicksand:300,400,600&display=swap"
+      "https://fonts.googleapis.com/css2?family=Arapey&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400&display=swap"
   });
   // Reg the infinite loading package
   Vue.use(InfiniteLoading);

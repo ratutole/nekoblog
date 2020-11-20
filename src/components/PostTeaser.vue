@@ -6,7 +6,7 @@
     </div>
     <div>
     <PostTags :post="post"></PostTags>
-    <g-link :to="post.path" class="text-blue-700 block text-right font-medium">read the full post</g-link>
+    <g-link :to="post.path" class="text-blue-800 block text-right uppercase text-sm font-medium">read the full post</g-link>
     </div>
   </div>
 </template>
@@ -32,6 +32,6 @@ export default {
 
 <style scoped>
   .card{
-    background: #fff;
+    background: #ebfffa;
   }
 </style>

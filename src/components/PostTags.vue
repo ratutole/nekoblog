@@ -4,9 +4,9 @@
       v-for="tag in post.tags"
       :key="tag.id"
       :to="tag.path"
-      class="py-1 bg-blue-100 mr-2 px-3 rounded-sm font-medium text-sm text-gray-700"
+      class="mr-2 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-200 text-gray-700 rounded-full"
     >
-      {{ tag.title }}
+      #{{ tag.title }}
     </g-link>
   </div>
 </template>

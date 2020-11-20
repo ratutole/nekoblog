@@ -24,12 +24,13 @@ export default {
 
 <style>
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-weight: 300;
-  background: #f5f5f5;
+  background: #f4f4f2;
+  color: #373331;
 }
 
 h1 {

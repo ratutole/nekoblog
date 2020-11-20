@@ -2,8 +2,8 @@
   <Layout>
     <!-- Landing Section start -->
 
-    <div class="landing__content mb-16 text-xl">
-      <div class="content mb-8">
+    <div class="landing__content mb-6 text-xl">
+      <div class="content">
         <div class="content__container">
           <ul class="content__container__list">
             <li class="content__container__list__item">Hello</li>
@@ -13,24 +13,25 @@
           </ul>
         </div>
       </div>
-      <div class="border-r-2 border-green-400 nk-bg-main py-2">
-        <h2 class="heading heading--sub mb-1">
-          <g-image src="~/assets/coding.svg" width="150" class="mb-2" />
-          Web Developer
+      <div class="border-r-2 border-green-400 nk-bg-main">
+        <h2 class="heading heading--sub mb-4 text-2xl">
+          Front-end Web Developer
         </h2>
+        <g-image src="~/assets/coding.svg" width="250" class="mb-2" />
       </div>
     </div>
 
     <section class="mb-6">
-      <h3 class="heading font-medium text-lg mb-2">A bit about me</h3>
-      <p class="font-medium text-gray-800">Hello, I am Parth. I work in making minimalistic, fast, responsive and beautiful websites. I am very passionate about making websites and working with new technologies. I will use the latest technologies to ensure your site works best on all devices</p>
+      <h3 class="heading heading--mod font-medium text-lg mb-2">A bit about me</h3>
+      <p class="font-normal text-gray-700">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as gridsome(this site is built on gridsome with &#10084;)
+      </p>
     </section>
     <!-- Landing section end -->
 
     <!-- Skills section start -->
     <section>
       <h5 class="heading heading--mod
-       mb- text-lg font-medium mb-6">Check out the blog</h5>
+      text-lg font-medium mb-3">Recent posts</h5>
       <div class="grid grid-cols-2 gap-4">
         <div
           v-for="edge in $page.posts.edges"
@@ -77,6 +78,10 @@ export default {
 </script>
 
 <style scoped>
+/* .nk-bg-main{
+  background: #e8e8e8;
+} */
+
 .content {
   bottom: 80px;
   height: 60px;
@@ -119,12 +124,20 @@ export default {
   color: #382933;
 }
 
+.heading--mod{
+  color: #521262;
+}
+
 .heading--mod::after {
   content: "";
   display: block;
   width: 20px;
   height: 1px;
   background: #fe9801;
+}
+
+.heading--sub{
+  font-family: "Arapey";
 }
 
 @keyframes change {
