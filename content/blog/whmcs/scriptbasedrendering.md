@@ -1,6 +1,6 @@
 ---
-title: Create Custom Template in ClientArea
-content: Here we are going to make use of the whmcs api(local), you can even use the external api to do what we are doing here
+title: Script based rendering
+content: Using a script to render html elements on a page
 slug: whmcs-custom-template
 path: /whmcs-custom-template
 tags: ["whmcs", "technical"]

@@ -10,14 +10,17 @@
         </main>
       </transition>
     </div>
+      <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 export default {
   components: {
-    Header
+    Header,
+    Footer,
   }
 };
 </script>
@@ -29,7 +32,7 @@ body {
   padding: 0;
   line-height: 1.5;
   font-weight: 300;
-  background: #f4f4f2;
+  background: #fdfdfd;
   color: #373331;
 }
 
@@ -46,6 +49,7 @@ h2 {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  min-height: calc(100vh - 54px);
 }
 
 .fade-enter-active {

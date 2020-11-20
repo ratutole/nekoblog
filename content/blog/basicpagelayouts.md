@@ -1,9 +1,9 @@
 ---
-title: Test post 2
-content: "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini."
-slug: post-two
-path: /post-two
-tags: ["other"]
+title: Basic Page Layouts
+content: "Some common page layouts and 1-line-css layouts referencing google"
+slug: basic-page-layouts
+path: /basic-page-layouts
+tags: ["CSS"]
 ---
 
 Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.

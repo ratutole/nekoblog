@@ -2,7 +2,7 @@
   <Layout>
     <!-- Landing Section start -->
 
-    <div class="landing__content mb-6 text-xl">
+    <div class="landing__content mb-10 text-xl">
       <div class="content">
         <div class="content__container">
           <ul class="content__container__list">
@@ -21,17 +21,25 @@
       </div>
     </div>
 
-    <section class="mb-6">
-      <h3 class="heading heading--mod font-medium text-lg mb-2">A bit about me</h3>
-      <p class="font-normal text-gray-700">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as gridsome(this site is built on gridsome with &#10084;)
+    <section class="mb-10">
+      <div class="flex items-center flex-row-reverse justify-end">
+         <g-image src="~/assets/doodle-28.png" width="60" class="mb-2 ml-1" />
+        <h3 class="heading heading--mod font-medium text-lg mb-4">A bit about <g-link class="underline" to="/about/">me</g-link></h3>
+      </div>
+      
+      <p class="font-normal text-gray-700 text-base">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as Vuepress and Gridsome sprinkle that with CSS libs Vuepress/tailwindcss.
       </p>
+    </section>
+
+    <section class="p-2 bg-purple-200 text-center mb-10 text-gray-600 font-medium nk-sticky-hire">
+      I am available for <a class="underline text-blue-500" href="mailto:nekowebsol@gmail.com">work/hire</a>
     </section>
     <!-- Landing section end -->
 
     <!-- Skills section start -->
     <section>
       <h5 class="heading heading--mod
-      text-lg font-medium mb-3">Recent posts</h5>
+      text-lg font-medium mb-5">Recent posts</h5>
       <div class="grid grid-cols-2 gap-4">
         <div
           v-for="edge in $page.posts.edges"
@@ -81,6 +89,9 @@ export default {
 /* .nk-bg-main{
   background: #e8e8e8;
 } */
+
+.nk-sticky-hire{
+}
 
 .content {
   bottom: 80px;
