@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout style="background:#faf7e6">
     <section class="projects neko-scroller" id="projects">
       <div class="nk-projects-container u-inner-container">
         <div class="nk-projects-heading-container">Work</div>

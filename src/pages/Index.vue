@@ -27,12 +27,12 @@
         <h3 class="heading heading--mod font-medium text-lg mb-4">A bit about <g-link class="underline" to="/about/">me</g-link></h3>
       </div>
       
-      <p class="font-normal text-gray-700 text-base">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as Vuepress and Gridsome sprinkle that with CSS libs Vuepress/tailwindcss.
+      <p class="font-normal nk-cust-gray text-base">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as Vuepress and Gridsome sprinkle that with CSS libs Vuepress/tailwindcss.
       </p>
     </section>
 
-    <section class="p-2 bg-purple-200 text-center mb-10 text-gray-600 font-medium nk-sticky-hire">
-      I am available for <a class="underline text-blue-500" href="mailto:nekowebsol@gmail.com">work/hire</a>
+    <section class="p-2 bg-green-100 mb-10 text-yellow-700 font-medium nk-sticky-hire text-sm flex justify-between items-center">
+     Send me a email to get in touch with me<a class="underline bg-green-500 px-2 p-1 text-white rounded-sm ml-2 text-xs font-bold" href="mailto:nekowebsol@gmail.com">Email Me</a>
     </section>
     <!-- Landing section end -->
 
@@ -60,7 +60,7 @@ query {
       node {
         id
         title
-        content
+        summary
         path  
         tags{
           id
@@ -75,6 +75,7 @@ query {
 
 <script>
 import PostTeaser from "../components/PostTeaser";
+
 export default {
   metaInfo: {
     title: "Welcome to my blog",
@@ -86,12 +87,6 @@ export default {
 </script>
 
 <style scoped>
-/* .nk-bg-main{
-  background: #e8e8e8;
-} */
-
-.nk-sticky-hire{
-}
 
 .content {
   bottom: 80px;
@@ -147,10 +142,6 @@ export default {
   background: #fe9801;
 }
 
-.heading--sub{
-  font-family: "Arapey";
-}
-
 @keyframes change {
   0%,
   12.66%,
@@ -178,6 +169,4 @@ export default {
     transform: translate3d(0, -25%, 0);
   }
 }
-
-/* Headings */
 </style>

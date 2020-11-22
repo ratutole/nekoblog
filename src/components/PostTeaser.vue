@@ -2,7 +2,7 @@
   <div class="card p-3 h-full flex flex-col justify-between shadow">
     <div>
     <h2 class="mb-2 font-medium">{{ post.title }}</h2>
-    <p class="text-sm text-gray-700 font-medium" v-html="post.content"></p>
+    <p class="text-sm nk-cust-gray font-medium" v-html="post.summary"></p>
     </div>
     <div>
     <PostTags :post="post"></PostTags>
