@@ -34,6 +34,9 @@ module.exports = {
   templates: {
     BlogPost: "/blog/:slug",
     Tag: "/tags/:id"
+  },
+  icon: {
+    favicon: './src/favicon.jpg',
   }
-  
+
 };
