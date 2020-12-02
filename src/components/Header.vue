@@ -1,9 +1,11 @@
 <template>
-  <header class="header">
-    <strong>
+  <header class="header flex-col md:flex-row">
+    <strong class="mb-2 md:mb-0">
       <g-link to="/">{{ $static.metadata.siteName }}</g-link>
     </strong>
-    <nav class="nav flex justify-center items-center">
+    <nav
+      class="nav flex justify-start items-center flex-wrap md:flex-nowrap md:justify-center"
+    >
       <div class="flex flex-col items-center">
         <div class="p-1 rounded-full nk-icon-bg">
           <Home />
@@ -38,9 +40,9 @@
         </a>
         <!-- <g-link class="nav__link font-medium text-sm" to="/work/">Work</g-link> -->
       </div>
-      <div class="flex flex-col items-center ml-6">
+      <div class="flex flex-col items-center ml-0 md:ml-6">
         <g-link
-          class="nav__link font-medium text-xs underline text-blue-700"
+          class="nav__link font-medium text-xs underline text-blue-700 mt-2 md:mt-0"
           to="https://nekocodes.netlify.app"
           >Old Site</g-link
         >
