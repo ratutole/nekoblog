@@ -14,7 +14,9 @@
         <div class="p-1 rounded-full nk-icon-bg">
           <User />
         </div>
-        <g-link class="nav__link font-medium text-sm" to="/about/">About</g-link>
+        <g-link class="nav__link font-medium text-sm" to="/about/"
+          >About</g-link
+        >
       </div>
       <div class="flex flex-col items-center ml-6">
         <div class="p-1 rounded-full nk-icon-bg">
@@ -30,11 +32,18 @@
       </div>
       <div class="flex flex-col items-center ml-6">
         <a href="mailto:nekowebsol@gmail.com">
-        <div class="p-1 px-2 rounded-sm bg-gray-700">
-          <Mail class="text-white"/>
-        </div>
+          <div class="p-1 px-2 rounded-sm bg-gray-700">
+            <Mail class="text-white" />
+          </div>
         </a>
         <!-- <g-link class="nav__link font-medium text-sm" to="/work/">Work</g-link> -->
+      </div>
+      <div class="flex flex-col items-center ml-6">
+        <g-link
+          class="nav__link font-medium text-xs underline text-blue-700"
+          to="https://nekocodes.netlify.app"
+          >Old Site</g-link
+        >
       </div>
     </nav>
   </header>
@@ -49,20 +58,20 @@ query {
 </static-query>
 
 <script>
-  import Home from '~/assets/icons/home.svg'
-  import User from '~/assets/icons/user.svg'
-  import BlogIcon from '~/assets/icons/book.svg'
-  import Work from '~/assets/icons/award.svg'
-  import Mail from '~/assets/icons/mail.svg'
-  export default {
-    components: {
-      Home,
-      User,
-      BlogIcon,
-      Work,
-      Mail
-    }
-  }
+import Home from "~/assets/icons/home.svg";
+import User from "~/assets/icons/user.svg";
+import BlogIcon from "~/assets/icons/book.svg";
+import Work from "~/assets/icons/award.svg";
+import Mail from "~/assets/icons/mail.svg";
+export default {
+  components: {
+    Home,
+    User,
+    BlogIcon,
+    Work,
+    Mail,
+  },
+};
 </script>
 
 
@@ -74,7 +83,7 @@ query {
   padding-top: 40px;
 }
 
-.nav__link.active--exact{
+.nav__link.active--exact {
   color: #6a197d;
   font-weight: 600;
   border-bottom: 1px solid rgba(107, 25, 125, 0.1);
@@ -83,5 +92,4 @@ query {
 /* .nk-icon-bg{
   background: #f2f4f7;
 } */
-
 </style>
