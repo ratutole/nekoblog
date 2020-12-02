@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false;
 library.add(faCss3, faWordpressSimple, faJs, faHtml5, faVuejs, faWhmcs, faReact, faPhp, faBootstrap)
 
-export default function(Vue, { router, head, isClient }) {
+export default function (Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href:
@@ -21,5 +21,5 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(InfiniteLoading);
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-  Vue.component('font-awesome',FontAwesomeIcon);
+  Vue.component('font-awesome', FontAwesomeIcon);
 }
