@@ -42,7 +42,7 @@
       </div>
       <div class="flex flex-col items-center ml-0 md:ml-6">
         <g-link
-          class="nav__link font-medium text-xs underline text-blue-700 mt-2 md:mt-0"
+          class="nav__link font-medium text-xs underline text-blue-700 mt-2 ml-2 md:mt-0"
           to="https://nekocodes.netlify.app"
           >Old Site</g-link
         >
