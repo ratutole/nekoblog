@@ -66,7 +66,7 @@
       </div>
       <div class="mt-16">
         <h1 class="mb-6 heading heading--sub font-normal text-xl">
-          <Webpage /> Apps
+          <Package /> Apps
         </h1>
         <g-link to="https://learnjapp.netlify.app/">
           <div class="shadow-sm rounded-lg bg-japp p-8 mb-6">
