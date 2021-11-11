@@ -2,49 +2,75 @@
   <Layout>
     <!-- Landing Section start -->
 
-    <div class="landing__content mb-10 text-xl">
-      <div class="content">
-        <div class="content__container">
-          <ul class="content__container__list">
-            <li class="content__container__list__item">Hello</li>
-            <li class="content__container__list__item">તમે કેમ છો</li>
-            <li class="content__container__list__item">नमस्ते</li>
-            <li class="content__container__list__item">こにちは</li>
-          </ul>
-        </div>
-      </div>
+    <div class="landing__content mb-10 mt-10 text-xl">
       <div class="border-r-2 border-green-400 nk-bg-main">
-        <h2 class="heading heading--sub mb-4 text-2xl">
-          Front-end Web Developer
-        </h2>
+        <h2 class="heading heading--sub mb-4 text-2xl">Web Developer</h2>
         <g-image src="~/assets/coding.svg" width="250" class="mb-2" />
       </div>
     </div>
 
     <section class="mb-10">
       <div class="flex items-center flex-row-reverse justify-end">
-         <g-image src="~/assets/doodle-28.png" width="60" class="mb-2 ml-1" />
-        <h3 class="heading heading--mod font-medium text-lg mb-4">A bit about <g-link class="underline" to="/about/">me</g-link></h3>
+        <div>
+          <h3 class="heading heading--mod font-medium text-lg mb-1">
+            Technology and Services
+          </h3>
+          <h5 class="heading text-xs text-gray-500 mb-4">
+            Fast, responsive and user-friendly websites using the latest
+            technologies
+          </h5>
+        </div>
       </div>
-      
-      <p class="font-normal nk-cust-gray text-base">I build fast, responsive and user-friendly websites using the latest technologies. I create user interfaces with Wordpress, WHMCS, Vue and ssg's such as Vuepress and Gridsome sprinkle that with CSS libs Vuepress/tailwindcss.
-      </p>
+
+       <ul class="text-sm text-gray-600">
+          <li>WHMCS</li>
+          <li>Wordpress</li>
+          <li>Blogs</li>
+          <li>Static Sites</li>
+          <li>SEO</li>
+          <li>Digital Marketing</li>
+         </ul>
     </section>
 
-    <section class="p-2 bg-green-100 mb-10 text-yellow-700 font-medium nk-sticky-hire text-sm flex justify-between items-center">
-     Send me a email to get in touch with me<a class="underline bg-green-500 px-2 p-1 text-white rounded-sm ml-2 text-xs font-bold" href="mailto:nekowebsol@gmail.com">Email Me</a>
+    <section
+      class="
+        p-2
+        bg-green-100
+        mb-10
+        text-yellow-700
+        font-medium
+        nk-sticky-hire
+        text-sm
+        flex
+        justify-between
+        items-center
+      "
+    >
+      Email us to get in touch<a
+        class="
+          underline
+          bg-green-500
+          px-2
+          p-1
+          text-white
+          rounded-sm
+          ml-2
+          text-xs
+          font-bold
+        "
+        href="mailto:nekowebsol@gmail.com"
+        >Email Us</a
+      >
     </section>
     <!-- Landing section end -->
 
     <!-- Skills section start -->
     <section>
-      <h5 class="heading heading--mod
-      text-lg font-medium mb-5">Recent posts</h5>
+      <h5 class="heading heading--mod text-lg font-medium mb-5">
+        Recent Works
+      </h5>
       <div class="grid grid-cols-2 gap-4">
-        <div
-          v-for="edge in $page.posts.edges"
-          :key="edge.node.id"
-        >
+        <div v-for="edge in $page.posts.edges" :key="edge.node.id">
           <post-teaser :post="edge.node"></post-teaser>
         </div>
       </div>
@@ -75,19 +101,36 @@ query {
 
 <script>
 import PostTeaser from "../components/PostTeaser";
+import axios from "axios";
 
 export default {
+  data() {
+    return {
+      quotes: null,
+    };
+  },
+
   metaInfo: {
     title: "Welcome to my blog",
   },
   components: {
     PostTeaser,
   },
+  async mounted() {
+    console.log("hello");
+    try {
+      const results = await axios.get("https://type.fit/api/quotes");
+
+      this.quotes = results.data;
+      console.log(results);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 </script>
 
 <style scoped>
-
 .content {
   bottom: 80px;
   height: 60px;
@@ -130,7 +173,7 @@ export default {
   color: #382933;
 }
 
-.heading--mod{
+.heading--mod {
   color: #521262;
 }
 
