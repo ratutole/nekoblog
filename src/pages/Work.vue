@@ -10,7 +10,7 @@
             <h4
               class="heading heading-mini font-bold text-lg mb-2 flex justify-between items-center"
             >
-              Parth's Blog
+              Blog
               <span class="px-1 bg-green-400 text-white text-xs rounded-sm"
                 >WIP</span
               >

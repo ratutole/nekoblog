@@ -15,7 +15,7 @@
           </h3>
           <div class="certificate">
             <p class="projects-item__text font-medium text-gray-600 text-sm nk-cust-gray">
-              Hello, I am Parth. I am a front-end developer specialising in building websites and web applications. I have been in this line of work for 2 years, I have worked on many exciting projects, various web technologies both as a freelancer and employee.
+              Hello, Web developer specialising in building websites and web applications. I have been in this line of work for 2 years, I have worked on many exciting projects, various web technologies both as a freelancer and employee.
             </p>
           </div>
         </div>
